@@ -4,7 +4,20 @@ This repository contains a Python-based educational tool that demonstrates the R
 
 ---
 
-## 📋 Input Requirements
+## How It Works
+
+
+
+The program follows these logical steps:
+
+1.  **Key Generation:** Generates two random primes ($p$ and $q$), computes $n = p \times q$, and determines the public ($e$) and private ($d$) keys.
+2.  **Encryption:** Converts your plaintext integer into ciphertext using the formula: $C = M^e \pmod{n}$.
+3.  **Factoring Attack:** Uses a **Probabilistic Algorithm** to find the factors of $n$. This mimics a mathematical attack on the RSA modulus by finding the greatest common divisor (GCD).
+4.  **Key Recovery:** Once $p$ and $q$ are found, it calculates the private key $d$ and decrypts the message to prove the attack was successful.
+
+---
+
+## Input Requirements
 
 To ensure the program runs successfully, please follow these input guidelines:
 
@@ -15,7 +28,7 @@ To ensure the program runs successfully, please follow these input guidelines:
 
 ---
 
-## 🚀 How to Run the Script
+## How to Run the Script
 
 ### Option 1: Using Visual Studio Code (Recommended)
 
@@ -44,19 +57,6 @@ If you want to run the program without a Python environment, you can convert it 
     pyinstaller --onefile rsa_attack.py
     ```
 3.  **Locate the File:** Once finished, go to the newly created **`dist`** folder. You will find `rsa_attack.exe` there. Double-click it to run.
-
----
-
-## 🧠 How It Works
-
-
-
-The program follows these logical steps:
-
-1.  **Key Generation:** Generates two random primes ($p$ and $q$), computes $n = p \times q$, and determines the public ($e$) and private ($d$) keys.
-2.  **Encryption:** Converts your plaintext integer into ciphertext using the formula: $C = M^e \pmod{n}$.
-3.  **Factoring Attack:** Uses a **Probabilistic Algorithm** to find the factors of $n$. This mimics a mathematical attack on the RSA modulus by finding the greatest common divisor (GCD).
-4.  **Key Recovery:** Once $p$ and $q$ are found, it calculates the private key $d$ and decrypts the message to prove the attack was successful.
 
 ---
 
